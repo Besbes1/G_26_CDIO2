@@ -8,15 +8,11 @@ public class Game {
 
         try {
             csvReader = new BufferedReader(new FileReader(gameTextFile));
-            while((line = csvReader.readLine()) != null) {
-                String[] row = line.split("\n");
-
-                for(String index : row) {
-                    System.out.printf(index);
-                }
-                System.out.println();
+            String[] row = new String[10];
+            for(int i = 0 ; i < 10 ; i++) {
+                row[i] = csvReader.readLine();
             }
-
+            
         }
         catch(Exception e) {
             e.printStackTrace();
