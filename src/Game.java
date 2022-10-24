@@ -5,7 +5,8 @@ import java.io.*;
 public class Game {
     public static void main(String[] args) {
         Text text = new Text();
-        System.out.println(text.getText(1));
+        String welcomeMessage = text.getText(1);
+        System.out.println(welcomeMessage);
 
     }
 }
