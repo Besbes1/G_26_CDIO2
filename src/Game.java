@@ -12,7 +12,7 @@ public class Game {
             for(int i = 0 ; i < 10 ; i++) {
                 row[i] = csvReader.readLine();
             }
-            
+
         }
         catch(Exception e) {
             e.printStackTrace();
