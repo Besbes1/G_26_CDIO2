@@ -3,7 +3,7 @@ import java.io.*;
 
 public class Text {
     public String getText(int index) { String gameTextFile = "src/gametext.csv";
-        String[] row = new String[10];
+        String[] row = new String[18];
         BufferedReader csvReader;
 
         try {
