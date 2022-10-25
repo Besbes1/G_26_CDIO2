@@ -2,6 +2,14 @@
 
 title Class Diagram
 
+class PlayerTurn {
+diceCup : Cup
+gameSquare : Square
+currentSum : int
+
+play(): void
+}
+
 class Cup{
 die1: Die
 die2 : Die
@@ -19,11 +27,8 @@ roll(): random int
 class Game {
 player1 : Player
 player2 : Player
-diceCup : Cup
-gameSquare : Square
-currentSum : int
 
-play(): void
+
 
 }
 
@@ -47,11 +52,13 @@ description[]: String
 
 
 
-Game "1" -left- "1" Cup
+PlayerTurn "1" -left- "1" Cup
 
 Game "1" -right- "2" Player
 
-Game "1" -down- "11" Square
+PlayerTurn "1" -down- "11" Square
+
+PlayerTurn "1" -up- "1" Game
 
 Cup "1" -down- "2" Die
 
