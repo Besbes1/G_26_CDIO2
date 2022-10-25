@@ -3,7 +3,7 @@ import java.io.*;
 
 abstract class Text {
 
-    public void Read(String file) {
+    private String Read(String file) {
         String gameTextFile = file;
         String[] row = new String[18];
         BufferedReader csvReader;
@@ -19,6 +19,11 @@ abstract class Text {
             e.printStackTrace();
 
         }
+        return row[index];
+    }
+
+    public void printDescription(String sumDice) {
+
     }
 }
 
