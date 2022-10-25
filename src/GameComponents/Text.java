@@ -3,7 +3,7 @@ import java.io.*;
 
 abstract class Text {
 
-    public String[] read(String file) {
+    public void row(String file, int index) {
         String gameTextFile = file;
         String[] row = new String[18];
         BufferedReader csvReader;
@@ -19,17 +19,17 @@ abstract class Text {
             e.printStackTrace();
 
         }
-        return row;
+        System.out.println(row[index]);
     }
 
 }
 
 class SquareDescription extends Text{
-        String[]row=new String[18];
-
-        row=Read("src/squaredescriptions");
-        System.out.println(row[sumDice]);
-        }
+    @Override
+    public void row(String file, int index) {
+        super.row("src/squaredescriptions", index);
+    }
+}
 
 
 /*
@@ -59,3 +59,6 @@ public class Text {
 }
 
  */
+
+//https://www.w3schools.com/java/java_abstract.asp
+
