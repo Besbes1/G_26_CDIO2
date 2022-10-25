@@ -1,0 +1,21 @@
+@startuml
+title Systemsekvensdiagram - Use-case: Play game
+
+
+participant Player
+participant System
+
+
+
+loop [while points >= 3000]
+  Player -> System : roll dice
+  System  --> Player : descriptive text
+  System --> Player : money in account
+
+end
+
+Player -> System : obtained balance 3000
+System --> Player : winner message
+
+
+@enduml

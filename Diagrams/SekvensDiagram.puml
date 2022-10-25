@@ -1,0 +1,25 @@
+@startuml
+title Sequence Diagram
+Game -> Text : getInstruction()
+Text --> Game : GameInstruction[ask name text]
+Game -> Text : getInstruction()
+Text --> Game : GameInstruction[press enter]
+loop while balance < 3000
+
+Game -> Cup : sumDice()
+Cup -> Die : throw()
+Die --> Cup : faceValue
+Cup --> Game : currentSum
+Game -> Square : description[currentSum]
+Square -> Game : description
+Game -> Square : pointsValue[currentSum]
+Square --> Game : pointsValue
+Game -> Player : updateBalance()
+Player -> BankAccount : setBalance()
+BankAccount --> Player : balance
+Player --> Game : newBalance
+
+
+end
+
+@enduml

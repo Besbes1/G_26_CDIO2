@@ -1,0 +1,72 @@
+@startuml
+
+title Class Diagram
+
+class PlayerTurn {
+diceCup : Cup
+gameSquare : Square
+currentSum : int
+
+play(): void
+}
+
+class Cup{
+die1: Die
+die2 : Die
+sumDice():int
+}
+
+class Die {
+maxSides: int
+faceValue: int
+
+roll(): random int
+
+}
+
+class Game {
+player1 : Player
+player2 : Player
+
+
+
+}
+
+class Player{
+account : Account
+name: String
+
+}
+
+class Account{
+balance
+updateBalance()
+
+}
+
+class Square {
+pointsValue[]: int
+description[]: String
+
+}
+
+
+
+PlayerTurn "1" -left- "1" Cup
+
+Game "1" -right- "2" Player
+
+PlayerTurn "1" -down- "11" Square
+
+PlayerTurn "1" -up- "1" Game
+
+Cup "1" -down- "2" Die
+
+Player "1" -down- "1" Account
+
+
+
+
+@enduml
+
+
