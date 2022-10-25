@@ -8,7 +8,7 @@ public class Text {
 
         try {
             csvReader = new BufferedReader(new FileReader(gameTextFile));
-            for(int i = 0 ; i < 10 ; i++) {
+            for(int i = 0 ; i < 18 ; i++) {
                 row[i] = csvReader.readLine();
 
             }
