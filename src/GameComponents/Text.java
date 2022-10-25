@@ -1,7 +1,7 @@
 package GameComponents;
 import java.io.*;
 
-public class Text {
+abstract class Text {
     public String getText(int index) { String gameTextFile = "src/gametext.csv";
         String[] row = new String[10];
         BufferedReader csvReader;
