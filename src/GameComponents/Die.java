@@ -6,7 +6,7 @@ This class is reused from our previous project CDIO 1 and translated to English.
  */
 public class Die {
     private int sides;
-    private int resultRoll;  // GEMMER VÆRDI FOR TERNINGEN EFTER KASTET
+    private int resultRoll;  // SAVES THE VALUE OF THE DIE AFTER ROLL
 
     public Die(int sides){
 
