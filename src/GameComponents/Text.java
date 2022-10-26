@@ -1,15 +1,17 @@
 package GameComponents;
 import java.io.*;
 
-abstract class Text {
-
-    private String Read(String file) {
-        String gameTextFile = file;
+public class Text {
+    String file;
+    public Text(String file){
+        this.file = file;
+    }
+    public void printText(int index) {
         String[] row = new String[18];
         BufferedReader csvReader;
 
         try {
-            csvReader = new BufferedReader(new FileReader(gameTextFile));
+            csvReader = new BufferedReader(new FileReader(file));
             for (int i = 0; i < 18; i++) {
                 row[i] = csvReader.readLine();
 
@@ -19,11 +21,9 @@ abstract class Text {
             e.printStackTrace();
 
         }
-        return row[index];
+        System.out.println(row[index]);
     }
 
-    public void printDescription(String sumDice) {
 
-    }
 }
 
