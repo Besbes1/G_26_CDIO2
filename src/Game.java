@@ -9,7 +9,7 @@ public class Game {
         gameInstruc.printText(1);
 
         //Prints description of square 2
-        squareDescrip.printText(2);
+        squareDescrip.printText(24);
 
     }
 }
