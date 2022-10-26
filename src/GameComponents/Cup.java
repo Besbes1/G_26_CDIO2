@@ -5,13 +5,12 @@ This class is reused from our previous project CDIO 1 and translated to English.
 ===================================================================================
  */
 public class Cup {
-
-    private int diceFaces = 6;
+    private int diceFaces = 6; // MAXIMUM AMOUNT OF FACES PER DIE PERMITTED IS 12
     Die die1 = new Die(diceFaces);
     Die die2 = new Die(diceFaces);
 
 
-    public int getSum () { // henter værdien af hver de to terninger og lægger dem sammen
+    public int getSum () { // GETS VALUE OF EACH DIE AND RETURNS THE SUM OF THE TWO
         int d1 = die1.roll();
         int d2 = die2.roll();
         System.out.println("First die: " + d1 + " and second die: " + d2);
