@@ -14,7 +14,7 @@ public class Die {
     }
 
     public int roll() {  // GENERERER ET TILFÆLDIGT INTEGER MELLEM 1 OG 6
-        final int diceFaces = 6 ;  // ANGIVER MAKS ANTAL AF SIDER FOR TERNINGEN
+        final int diceFaces = sides ;  // ANGIVER MAKS ANTAL AF SIDER FOR TERNINGEN
         resultRoll = (int)(Math.random() * diceFaces ) + 1;
         return resultRoll;
     }
