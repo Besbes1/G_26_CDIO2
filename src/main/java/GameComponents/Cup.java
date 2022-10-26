@@ -9,6 +9,8 @@ public class Cup {
     Die die2 = new Die();
 
 
+
+
     public int getSum () { // henter værdien af hver de to terninger og lægger dem sammen
         int d1 = die1.roll();
         int d2 = die2.roll();
