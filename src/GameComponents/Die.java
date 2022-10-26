@@ -13,8 +13,8 @@ public class Die {
         this.sides = sides;
     }
 
-    public int roll() {  // GENERERER ET TILFÆLDIGT INTEGER MELLEM 1 OG 6
-        final int diceFaces = sides ;  // ANGIVER MAKS ANTAL AF SIDER FOR TERNINGEN
+    public int roll() {  //  GENERATES A RANDOM INTEGER BETWEEN 1 AND THE AMOUNT OF SIDES CHOSEN
+        final int diceFaces = sides ;
         resultRoll = (int)(Math.random() * diceFaces ) + 1;
         return resultRoll;
     }
