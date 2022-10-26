@@ -5,8 +5,10 @@ This class is reused from our previous project CDIO 1 and translated to English.
 ===================================================================================
  */
 public class Cup {
-    Die die1 = new Die();
-    Die die2 = new Die();
+
+    private int diceFaces = 6;
+    Die die1 = new Die(diceFaces);
+    Die die2 = new Die(diceFaces);
 
 
     public int getSum () { // henter værdien af hver de to terninger og lægger dem sammen
