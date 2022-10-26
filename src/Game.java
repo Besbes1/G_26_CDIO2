@@ -4,9 +4,14 @@ import jdk.jfr.Description;
 import java.io.*;
 public class Game {
     public static void main(String[] args) {
-        Text text = new Text();
-        String welcomeMessage = text.getText(1);
-        System.out.println(welcomeMessage);
+        Text gameInstruc = new Text("src/gametext.csv");
+        Text squareDescrip = new Text("src/squaredescriptions");
+
+        //Prints welcome message
+        gameInstruc.printText(1);
+
+        //Prints description of square 2
+        squareDescrip.printText(2);
 
     }
 }
