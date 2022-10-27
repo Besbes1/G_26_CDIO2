@@ -8,7 +8,7 @@ public class Game {
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Cup diceCup = new Cup();
-        Square board = new Square();
+        Square square = new Square();
 
         int diceFaces;
         int currentSum;
@@ -43,7 +43,7 @@ public class Game {
                 squareDescrip.printText(currentSum);
 
                 //GETS THE VALUE OF THE SQUARE
-                pointsValue = board.getPointValue(currentSum);
+                pointsValue = square.getPointValue(currentSum);
                 player1.setPoints(pointsValue);
                 player1Balance = player1.getBalance();
                 player1.printBalance();
@@ -71,7 +71,7 @@ public class Game {
                 squareDescrip.printText(currentSum);
 
                 //GETS THE VALUE OF THE SQUARE
-                pointsValue = board.getPointValue(currentSum);
+                pointsValue = square.getPointValue(currentSum);
                 player2.setPoints(pointsValue);
                 player2Balance = player2.getBalance();
                 player2.printBalance();
