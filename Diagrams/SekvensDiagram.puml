@@ -6,18 +6,25 @@ Game -> Text : getInstruction()
 Text --> Game : GameInstruction[press enter]
 loop while balance < 3000
 
-Game -> Cup : sumDice()
+Game -> PlayerTurn : play()
+PlayerTurn -> Cup : sumDice()
 Cup -> Die : throw()
 Die --> Cup : faceValue
-Cup --> Game : currentSum
-Game -> Square : description[currentSum]
-Square -> Game : description
-Game -> Square : pointsValue[currentSum]
-Square --> Game : pointsValue
-Game -> Player : updateBalance()
+Cup --> PlayerTurn : currentSum
+PlayerTurn -> Text : description[currentSum]
+Text -> PlayerTurn : description
+PlayerTurn -> Square : pointsValue[currentSum]
+Square --> PlayerTurn : pointsValue
+loop if deposit
+PlayerTurn -> Player : deposit()
 Player -> BankAccount : setBalance()
-BankAccount --> Player : balance
-Player --> Game : newBalance
+end
+loop else if withdraw
+PlayerTurn -> Player : withdraw()
+Player -> BankAccount : setBalance()
+end
+BankAccount --> Player : newBalance
+Player --> PlayerTurn : newBalance
 
 
 end
