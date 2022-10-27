@@ -1,7 +1,7 @@
 package GameComponents;
 
 public class Account {
-    private int balance = 10;
+    private int balance = 1000;
     //private String Accountname;
 
     public void setBalance(int initialBalance){

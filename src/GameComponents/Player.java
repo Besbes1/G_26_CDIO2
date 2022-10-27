@@ -3,6 +3,7 @@ package GameComponents;
 
 //We are going to reuse the player class from the previous project CDIO1//
 public class Player {
+    Text gameInstruc = new Text("src/gametext.csv");
     Account bankAccount = new Account();
     private int playerNumber;
     private int points;
@@ -35,7 +36,8 @@ public class Player {
     }
 
     public void printBalance() {
-        System.out.println("Player " + playerNumber + " now has " + bankAccount.getBalance() + " in their bank account." );
+       gameInstruc.printText(6);
+        System.out.println(bankAccount.getBalance());
     }
 }
 
