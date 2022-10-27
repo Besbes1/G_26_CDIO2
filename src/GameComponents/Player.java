@@ -7,7 +7,7 @@ public class Player {
     private int playerNumber;
     private int points;
 
-    public Player(int playerNumber, int points) {
+    public Player(int playerNumber) {
         this.playerNumber = playerNumber;
         this.points = points;
         System.out.println("Player " + playerNumber);

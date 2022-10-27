@@ -5,8 +5,8 @@ public class Game {
         Text gameInstruc = new Text("src/gametext.csv");
         Text squareDescrip = new Text("src/squaredescriptions");
         Scanner input = new Scanner(System.in);
-        Player player1 = new Player(1,1000);
-        Player player2 = new Player(2,1000);
+        Player player1 = new Player(1);
+        Player player2 = new Player(2);
         Cup diceCup = new Cup();
         Square board = new Square();
 
