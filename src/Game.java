@@ -15,20 +15,21 @@ public class Game {
         int pointsValue;
         boolean depositMoney;
 
+
+        //Prints welcome message
+        gameInstruc.printText(1);
         int player1Balance = player1.getBalance();
         gameInstruc.printText(10); System.out.println(player1Balance);
         int player2Balance = player2.getBalance();
         gameInstruc.printText(11); System.out.println(player1Balance);
-
-
-        //Prints welcome message
-        gameInstruc.printText(1);
 
         //Asks player to choose dice
         gameInstruc.printText(7);
 
         diceFaces = input.nextInt();
         diceCup.chooseDie(diceFaces);
+
+
         input.nextLine(); // random scanner cause or else it jumps right over the next input.nextLine() and idno why
 
         int winningBalance = 3000;
