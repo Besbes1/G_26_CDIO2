@@ -28,10 +28,6 @@ public class Game {
         diceFaces = input.nextInt();
         diceCup.chooseDie(diceFaces);
 
-        //Tells player which dice chosen
-        gameInstruc.printText(8);
-        System.out.println(diceFaces);
-
         while(player1Balance < 3000 && player2Balance < 3000) {
             boolean nextTurn;
             do {

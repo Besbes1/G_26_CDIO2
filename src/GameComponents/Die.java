@@ -13,7 +13,7 @@ public class Die {
 
     public void setSides(int sides) {
         this.sides = sides;
-        System.out.println("You chose a D" + this.sides);
+        System.out.println("You chose a D" + this.sides); //OBS TO BE ADDED TO GAMETEXT.CSV!!!
     }
     public int roll() {  //  GENERATES A RANDOM INTEGER BETWEEN 1 AND THE AMOUNT OF SIDES CHOSEN
         //final int diceFaces = sides ;
