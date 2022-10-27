@@ -27,6 +27,7 @@ public class Game {
 
         diceFaces = input.nextInt();
         diceCup.chooseDie(diceFaces);
+        //input.nextLine();
 
         int winningBalance = 300;
         while(player1Balance < winningBalance && player2Balance < winningBalance) {
@@ -71,6 +72,7 @@ public class Game {
                 //GETS THE VALUE OF THE SQUARE
                 pointsValue = board.getPointValue(currentSum);
                 player2.setPoints(pointsValue);
+                player2Balance = player2.getBalance();
                 player2.printBalance();
 
                 if (currentSum == 10) {
