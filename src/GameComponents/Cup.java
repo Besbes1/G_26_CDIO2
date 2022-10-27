@@ -11,7 +11,7 @@ public class Cup {
 
     public void chooseDie(int diceFaces) {
         die1.setSides(diceFaces);
-        die1.setSides(diceFaces);
+        die2.setSides(diceFaces);
     }
 
 
