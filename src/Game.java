@@ -27,7 +27,7 @@ public class Game {
 
         diceFaces = input.nextInt();
         diceCup.chooseDie(diceFaces);
-        //input.nextLine();
+        input.nextLine(); // random scanner cause or else it jumps right over the next input.nextLine() and idno why
 
         int winningBalance = 300;
         while(player1Balance < winningBalance && player2Balance < winningBalance) {
