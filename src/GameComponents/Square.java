@@ -9,7 +9,7 @@ public class Square {
 
     private boolean[] positiveValue = {true, false, true, false, true, true, false,
             true, false, false, true, false, true, true,
-            true, true, true, true, true, true, true,
+            true, true, true, false, true, true, true,
             true, false};
     public int getPointValue(int diceSum) {
         int i = pointArray[diceSum - 2];
