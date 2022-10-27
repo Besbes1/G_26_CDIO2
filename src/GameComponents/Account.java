@@ -1,8 +1,12 @@
 package GameComponents;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+
 public class Account {
     private double balance;
     private String Accountname;
+
 
     public Account(String name){
         balance = 0;
@@ -21,10 +25,31 @@ public class Account {
         if (balance < 0)
             balance = 0;
     }
-    public void getBalance()
+    public double getBalance()
     {
-        System.out.println(Accountname + "now has " + balance + " points");
+        //System.out.println(Accountname + "now has " + balance + " points");
+        return(balance);
     }
+
+    /*
+    public void printText(int index) {
+        String[] row = new String[18];
+        BufferedReader csvReader;
+
+        try {
+            csvReader = new BufferedReader(new FileReader(file));
+            for (int i = 0; i < 18; i++) {
+                row[i] = csvReader.readLine();
+
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        }
+    }
+
+     */
 }
 
 

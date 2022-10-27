@@ -4,24 +4,38 @@ package GameComponents;
 //We are going to reuse the player class from the previous project CDIO1//
 public class Player {
 
-    private int playerNumber;
-    private int points;
+    private String playerName;
+    private double points;
+    Account PlayerAccount = new Account(playerName);
 
-    public Player(int playerNumber, int points) {
-        this.playerNumber = playerNumber;
+    public Player(String playerName, int points) {
+        this.playerName = playerName;
         this.points = points;
-        System.out.println("Player " + playerNumber);
+        System.out.println("Player " + playerName);
+        PlayerAccount.setBalance(points);
+
     }
 
+    /*
     public int getPlayerNumber() {
         return playerNumber;
     }
 
-    public void setPoints(int newPoints) {
-        points = newPoints;
+     */
+
+    public void takePoints(double newPoints) {
+        PlayerAccount.withDraw(newPoints);
     }
 
-    public int getPoints(){
-        return points;
+    public void givePoints(double newPoints){
+        PlayerAccount.deposit(newPoints);
+    }
+
+    public void getPoints(){
+        System.out.println(PlayerAccount.getBalance());
+    }
+
+    public String getPlayerName (){
+        return playerName;
     }
 }
