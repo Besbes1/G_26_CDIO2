@@ -9,7 +9,7 @@ public class Player {
 
     public Player(int playerNumber) {
         this.playerNumber = playerNumber;
-        System.out.println("Player " + playerNumber);
+        //System.out.println("Player " + playerNumber);
     }
 
     public int getPlayerNumber() {
