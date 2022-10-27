@@ -3,13 +3,12 @@ package GameComponents;
 
 //We are going to reuse the player class from the previous project CDIO1//
 public class Player {
-    Account bankAccount = new Account("Player Account");
+    Account bankAccount = new Account();
     private int playerNumber;
     private int points;
 
     public Player(int playerNumber) {
         this.playerNumber = playerNumber;
-        this.points = points;
         System.out.println("Player " + playerNumber);
     }
 

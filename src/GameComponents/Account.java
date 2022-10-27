@@ -1,13 +1,9 @@
 package GameComponents;
 
 public class Account {
-    private int balance;
-    private String Accountname;
+    private int balance = 1000;
+    //private String Accountname;
 
-    public Account(String name){
-        balance = 0;
-        Accountname = name;
-    }
     public void setBalance(int initialBalance){
         balance = initialBalance;
     }
