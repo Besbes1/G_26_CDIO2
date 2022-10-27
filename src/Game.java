@@ -13,10 +13,11 @@ public class Game {
         int diceFaces;
         int currentSum;
         int pointsValue;
+
         int player1Balance = player1.getBalance();
-        System.out.println("Player 1 start balance: " + player1.getBalance());
+        gameInstruc.printText(10); System.out.println(player1Balance);
         int player2Balance = player2.getBalance();
-        System.out.println("Player 2 start balance: " + player2.getBalance());
+        gameInstruc.printText(11); System.out.println(player1Balance);
 
 
         //Prints welcome message
