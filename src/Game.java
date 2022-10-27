@@ -23,14 +23,14 @@ public class Game {
         gameInstruc.printText(1);
 
         //Asks player to choose dice
-        /*gameInstruc.printText(7);
+        gameInstruc.printText(7);
 
         diceFaces = input.nextInt();
         diceCup.setDiceFaces(diceFaces);
 
         //Tells player which dice chosen
         gameInstruc.printText(8);
-        System.out.println(diceFaces);*/
+        System.out.println(diceFaces);
 
         while(player1Balance < 3000 && player2Balance < 3000) {
             boolean nextTurn;

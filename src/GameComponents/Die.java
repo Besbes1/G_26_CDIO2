@@ -8,14 +8,15 @@ public class Die {
     private int sides;
     private int resultRoll;  // SAVES THE VALUE OF THE DIE AFTER ROLL
 
-    public Die(int sides){
-
-        this.sides = sides;
+    public Die(){
     }
 
+    public int getSides(int sides) {
+        return this.sides = sides;
+    }
     public int roll() {  //  GENERATES A RANDOM INTEGER BETWEEN 1 AND THE AMOUNT OF SIDES CHOSEN
-        final int diceFaces = sides ;
-        resultRoll = (int)(Math.random() * diceFaces ) + 1;
+        //final int diceFaces = sides ;
+        resultRoll = (int)(Math.random() * sides ) + 1;
         return resultRoll;
     }
 
