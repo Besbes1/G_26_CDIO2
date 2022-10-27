@@ -46,7 +46,9 @@ public class Game {
                 //GETS THE VALUE OF THE SQUARE
                 pointsValue = board.getPointValue(currentSum);
                 player1.setPoints(pointsValue);
+                player1Balance = player1.getBalance();
                 player1.printBalance();
+
 
                 if (currentSum == 10) {
                     nextTurn = false;

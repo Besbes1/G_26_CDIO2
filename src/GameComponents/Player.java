@@ -33,7 +33,6 @@ public class Player {
     }
 
     public void printBalance() {
-
         System.out.println("Player " + playerNumber + " now has " + bankAccount.getBalance() + " in their bank account." );
     }
 }
