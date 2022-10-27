@@ -9,6 +9,11 @@ public class Cup {
     Die die1 = new Die(diceFaces);
     Die die2 = new Die(diceFaces);
 
+    public int setDiceFaces(int diceFaces) {
+        this.diceFaces = diceFaces;
+        return diceFaces;
+    }
+
 
     public int getSum () { // GETS VALUE OF EACH DIE AND RETURNS THE SUM OF THE TWO
         int d1 = die1.roll();
