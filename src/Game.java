@@ -13,6 +13,7 @@ public class Game {
         int diceFaces;
         int currentSum;
         int pointsValue;
+        boolean depositMoney;
 
         int player1Balance = player1.getBalance();
         gameInstruc.printText(10); System.out.println(player1Balance);
@@ -44,7 +45,8 @@ public class Game {
 
                 //GETS THE VALUE OF THE SQUARE
                 pointsValue = square.getPointValue(currentSum);
-                player1.setPoints(pointsValue);
+                depositMoney = square.isPositive(currentSum);
+                player1.setPoints(pointsValue, depositMoney);
                 player1Balance = player1.getBalance();
                 player1.printBalance();
 
@@ -72,7 +74,8 @@ public class Game {
 
                 //GETS THE VALUE OF THE SQUARE
                 pointsValue = square.getPointValue(currentSum);
-                player2.setPoints(pointsValue);
+                depositMoney = square.isPositive(currentSum);
+                player2.setPoints(pointsValue, depositMoney);
                 player2Balance = player2.getBalance();
                 player2.printBalance();
 

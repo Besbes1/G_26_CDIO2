@@ -16,14 +16,16 @@ public class Player {
         return playerNumber;
     }
 
-    public void setPoints(int newPoints) {
+    public void setPoints(int newPoints, boolean isPos) {
 
         points = newPoints;
-        if (points < 0){
-            bankAccount.withDraw(points);
+        boolean bankAction = isPos;
+
+        if (bankAction){
+            bankAccount.deposit(points);
 
         } else {
-            bankAccount.deposit(points);
+            bankAccount.withDraw(points);
         }
     }
 

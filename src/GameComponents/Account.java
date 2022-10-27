@@ -7,12 +7,12 @@ public class Account {
     public void setBalance(int initialBalance){
         balance = initialBalance;
     }
-    public void deposit(int amount)
-    {
+    public void deposit(int amount) {
         balance += amount;
+
     }
-    public void withDraw(int amount)
-    {
+    public void withDraw(int amount) {
+
         balance -= amount;
         if (balance < 0)
             balance = 0;
