@@ -13,39 +13,65 @@ public class Game {
         int diceFaces;
         int currentSum;
         int pointsValue;
+        int player1Balance = player1.getBalance();
+        System.out.println("Player 1 start balance: " + player1.getBalance());
+        int player2Balance = player2.getBalance();
+
 
         //Prints welcome message
         gameInstruc.printText(1);
 
         //Asks player to choose dice
-        gameInstruc.printText(7);
+        /*gameInstruc.printText(7);
 
         diceFaces = input.nextInt();
         diceCup.setDiceFaces(diceFaces);
 
         //Tells player which dice chosen
         gameInstruc.printText(8);
-        System.out.println(diceFaces);
+        System.out.println(diceFaces);*/
 
-        //while(player1)
-        boolean extraTurn;
-        do
-        {
-            extraTurn = true;
-            //THROWS THE DICE AND PRINTS SQUARE DESCRIPTION ACCORDINGLY
-            currentSum = diceCup.getSum();
-            squareDescrip.printText(currentSum);
+        while(player1Balance < 3000 && player2Balance < 3000) {
+            boolean nextTurn;
+            do {
+                nextTurn = true;
+                //THROWS THE DICE AND PRINTS SQUARE DESCRIPTION ACCORDINGLY
+                System.out.println();
+                gameInstruc.printText(2); // Prints Player 1 turn text
+                input.nextLine();
+                currentSum = diceCup.getSum();
+                squareDescrip.printText(currentSum);
 
-            //GETS THE VALUE OF THE SQUARE
-            pointsValue = board.getPointValue(currentSum);
-            player1.setPoints(pointsValue);
-            player1.printBalance();
+                //GETS THE VALUE OF THE SQUARE
+                pointsValue = board.getPointValue(currentSum);
+                player1.setPoints(pointsValue);
+                player1.printBalance();
 
-            if (currentSum != 10) {
-                extraTurn = false;
-            }
+                if (currentSum == 10) {
+                    nextTurn = false;
+                }
 
-        } while (extraTurn = true);
+            } while (!nextTurn);
 
+            do {
+                nextTurn = true;
+                //THROWS THE DICE AND PRINTS SQUARE DESCRIPTION ACCORDINGLY
+                System.out.println();
+                gameInstruc.printText(3); // Prints Player 2 turn text
+                input.nextLine();
+                currentSum = diceCup.getSum();
+                squareDescrip.printText(currentSum);
+
+                //GETS THE VALUE OF THE SQUARE
+                pointsValue = board.getPointValue(currentSum);
+                player2.setPoints(pointsValue);
+                player2.printBalance();
+
+                if (currentSum == 10) {
+                    nextTurn = false;
+                }
+
+            } while (!nextTurn);
+        }
     }
 }

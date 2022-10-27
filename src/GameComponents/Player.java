@@ -29,13 +29,13 @@ public class Player {
     }
 
     public int getBalance(){
-
-        return points;
+        int newBalance = bankAccount.getBalance();
+        return newBalance;
     }
 
     public void printBalance() {
-        int newBalance = bankAccount.getBalance();
-        System.out.println("Player " + playerNumber + " now has " + newBalance + " in their bank account." );
+
+        System.out.println("Player " + playerNumber + " now has " + bankAccount.getBalance() + " in their bank account." );
     }
 }
 
