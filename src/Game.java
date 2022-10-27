@@ -26,7 +26,7 @@ public class Game {
         gameInstruc.printText(7);
 
         diceFaces = input.nextInt();
-        diceCup.setDiceFaces(diceFaces);
+        diceCup.chooseDie(diceFaces);
 
         //Tells player which dice chosen
         gameInstruc.printText(8);

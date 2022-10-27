@@ -11,8 +11,9 @@ public class Die {
     public Die(){
     }
 
-    public int getSides(int sides) {
-        return this.sides = sides;
+    public void setSides(int sides) {
+        this.sides = sides;
+        System.out.println("You chose a D" + this.sides);
     }
     public int roll() {  //  GENERATES A RANDOM INTEGER BETWEEN 1 AND THE AMOUNT OF SIDES CHOSEN
         //final int diceFaces = sides ;

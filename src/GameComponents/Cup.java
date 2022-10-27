@@ -5,13 +5,13 @@ This class is reused from our previous project CDIO 1 and translated to English.
 ===================================================================================
  */
 public class Cup {
-    private int diceFaces=6; // MAXIMUM AMOUNT OF FACES PER DIE PERMITTED IS 12
+    private int diceFaces; // MAXIMUM AMOUNT OF FACES PER DIE PERMITTED IS 12
     Die die1 = new Die();
     Die die2 = new Die();
 
-    public int setDieFaces(int diceFaces) {
-        this.diceFaces = diceFaces;
-        return diceFaces;
+    public void chooseDie(int diceFaces) {
+        die1.setSides(diceFaces);
+        die1.setSides(diceFaces);
     }
 
 
