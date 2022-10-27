@@ -10,6 +10,7 @@ public class Game {
         Cup diceCup = new Cup();
         Square board = new Square();
 
+        int winningBalance = 300;
         int diceFaces;
         int currentSum;
         int pointsValue;
@@ -28,9 +29,10 @@ public class Game {
         diceFaces = input.nextInt();
         diceCup.chooseDie(diceFaces);
 
-        while(player1Balance < 3000 && player2Balance < 3000) {
+        while(player1Balance < winningBalance && player2Balance < winningBalance) {
             boolean nextTurn;
             do {
+
                 nextTurn = true;
                 //THROWS THE DICE AND PRINTS SQUARE DESCRIPTION ACCORDINGLY
                 System.out.println();
@@ -49,6 +51,11 @@ public class Game {
                 if (currentSum == 10) {
                     nextTurn = false;
                     gameInstruc.printText(9);
+                }
+
+                if (player1Balance >=winningBalance) {
+                    System.out.println("Player 1 you win!");
+                    break;
                 }
 
             } while (!nextTurn);
@@ -70,6 +77,11 @@ public class Game {
                 if (currentSum == 10) {
                     nextTurn = false;
                     gameInstruc.printText(9);
+                }
+
+                if (player2Balance >=winningBalance) {
+                    System.out.println("Player 2 you win!");
+                    break;
                 }
 
             } while (!nextTurn);
