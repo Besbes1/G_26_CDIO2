@@ -21,39 +21,35 @@ public class Game {
         Player player1 = new Player(Player1,1000);
         Player player2 = new Player(Player2,1000);
 
-        int Win = 0;
 
-        int turnToken = 0;
-
-        while(Win ==0)
+        while(true)
         {
 
             if (player1.getPoints()>=3000)
             {
                 System.out.println("Congratulations player 1: " +player1.getPlayerName()+ " you have won");
-                Win = 1;
                 break;
 
             }
             else if (player2.getPoints()>=3000)
             {
                 System.out.println("Congratulations player 2: " +player2.getPlayerName()+ " you have won");
-                Win = 1;
                 break;
+
             }
             Turn.move(player1);
 
             if (player1.getPoints()>=3000)
             {
                 System.out.println("Congratulations player 1: " +player1.getPlayerName()+ " you have won");
-                Win = 1;
                 break;
+
             }
             else if (player2.getPoints()>=3000)
             {
                 System.out.println("Congratulations player 2: " +player2.getPlayerName()+ " you have won");
-                Win = 1;
                 break;
+
             }
             Turn.move(player2);
         }
