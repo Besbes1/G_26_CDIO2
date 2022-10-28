@@ -27,31 +27,35 @@ public class Game {
 
         while(Win ==0)
         {
+
+            if (player1.getPoints()>=3000)
+            {
+                System.out.println("Congratulations player 1: " +player1.getPlayerName()+ " you have won");
+                Win = 1;
+                break;
+
+            }
+            else if (player2.getPoints()>=3000)
+            {
+                System.out.println("Congratulations player 2: " +player2.getPlayerName()+ " you have won");
+                Win = 1;
+                break;
+            }
             Turn.move(player1);
 
             if (player1.getPoints()>=3000)
             {
                 System.out.println("Congratulations player 1: " +player1.getPlayerName()+ " you have won");
                 Win = 1;
-
+                break;
             }
             else if (player2.getPoints()>=3000)
             {
                 System.out.println("Congratulations player 2: " +player2.getPlayerName()+ " you have won");
                 Win = 1;
+                break;
             }
-
             Turn.move(player2);
-            if (player1.getPoints()>=3000)
-            {
-                System.out.println("Congratulations player 1: " +player1.getPlayerName()+ " you have won");
-                Win = 1;
-            }
-            else if (player2.getPoints()>=3000)
-            {
-                System.out.println("Congratulations player 2: " +player2.getPlayerName()+ " you have won");
-                Win = 1;
-            }
         }
 
 
