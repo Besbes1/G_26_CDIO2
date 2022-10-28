@@ -44,7 +44,7 @@ public class PlayerTurn {
         System.out.printf("%s %s %.0f \n",currentPlayer.getPlayerName(),gameInstruction.returnText(8),currentPlayer.getPoints());
 
         if (Sum == 10 ){
-            System.out.println(currentPlayer.getPlayerName() +);
+            System.out.println(currentPlayer.getPlayerName());
             System.out.println("Press ENTER to roll the dice");
 
             //userInput.nextLine();
