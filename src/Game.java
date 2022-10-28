@@ -33,6 +33,7 @@ public class Game {
             {
                 System.out.println("Congratulations player 1: " +player1.getPlayerName()+ " you have won");
                 Win = 1;
+
             }
             else if (player2.getPoints()>=3000)
             {
