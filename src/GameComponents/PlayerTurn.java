@@ -1,6 +1,7 @@
 package GameComponents;
 
 import java.util.Scanner;
+import gui_main.GUI;
 
 public class PlayerTurn {
     // Square 2:    Deposit: 250
@@ -16,6 +17,7 @@ public class PlayerTurn {
     // Square 12:   Deposit: 650
     public void move(Player currentPlayer) {
 
+        GUI gui = new GUI();
         Scanner userInput = new Scanner(System.in);
         Square square = new Square();
         Cup Cup = new Cup();
@@ -28,6 +30,7 @@ public class PlayerTurn {
         //userInput.nextLine();
 
         Sum = Cup.getSum();
+
         Point = square.moveToSquare(Sum);
 
         if (Point < 0) {
