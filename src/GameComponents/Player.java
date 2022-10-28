@@ -31,8 +31,9 @@ public class Player {
         PlayerAccount.deposit(newPoints);
     }
 
-    public void getPoints(){
-        System.out.println(PlayerAccount.getBalance());
+    public double getPoints(){
+        //System.out.println(PlayerAccount.getBalance());
+        return (PlayerAccount.getBalance());
     }
 
     public String getPlayerName (){

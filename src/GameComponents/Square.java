@@ -25,6 +25,9 @@ public class Square {
 
     public int moveToSquare(int Sum) {
         Text squareDescription = new Text("src/squaredescriptions");
+        if(Sum>12 && Sum>2) {
+            System.out.println("Dice sum out of valid range"); //Needs to be polished
+        }
         squareDescription.printText(Sum);
         return (getPointValue(Sum));
 

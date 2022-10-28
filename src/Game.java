@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Game {
     public static void main(String[] args) {
         Text gameInstruction = new Text("src/gametext.csv");
-
+        PlayerTurn Turn = new PlayerTurn();
         Scanner userInput = new Scanner(System.in);
 
         //Prints welcome message
@@ -21,25 +21,37 @@ public class Game {
         Player player1 = new Player(Player1,1000);
         Player player2 = new Player(Player2,1000);
 
+        int Win = 0;
 
-        int turn = 0;
+        int turnToken = 0;
 
+        while(Win ==0)
+        {
+            Turn.move(player1);
 
+            if (player1.getPoints()>=3000)
+            {
+                System.out.println("Congratulations player 1: " +player1.getPlayerName()+ " you have won");
+                Win = 1;
+            }
+            else if (player2.getPoints()>=3000)
+            {
+                System.out.println("Congratulations player 2: " +player2.getPlayerName()+ " you have won");
+                Win = 1;
+            }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            Turn.move(player2);
+            if (player1.getPoints()>=3000)
+            {
+                System.out.println("Congratulations player 1: " +player1.getPlayerName()+ " you have won");
+                Win = 1;
+            }
+            else if (player2.getPoints()>=3000)
+            {
+                System.out.println("Congratulations player 2: " +player2.getPlayerName()+ " you have won");
+                Win = 1;
+            }
+        }
 
 
 

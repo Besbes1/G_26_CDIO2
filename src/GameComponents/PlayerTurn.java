@@ -14,7 +14,7 @@ public class PlayerTurn {
     // Square 10:   Withdraw: 80
     // Square 11:   Withdraw: 50
     // Square 12:   Deposit: 650
-    public void turn(Player currentPlayer) {
+    public void move(Player currentPlayer) {
 
         Scanner userInput = new Scanner(System.in);
         Square square = new Square();
@@ -22,23 +22,44 @@ public class PlayerTurn {
         int Sum = 0;
         int Point = 0;
 
-        System.out.println(currentPlayer.getPlayerName() + " it is your turn");
+        System.out.println("\n"+ currentPlayer.getPlayerName() + " it is your turn");
         System.out.println("Press ENTER to roll the dice");
 
-        userInput.nextLine();
+        //userInput.nextLine();
 
         Sum = Cup.getSum();
         Point = square.moveToSquare(Sum);
 
-        if (Point<0){
+        if (Point < 0) {
             int newPoint = Math.abs(Point);
             currentPlayer.takePoints(newPoint);
-        }
-        else if (Point>0) {
+        } else if (Point > 0) {
             currentPlayer.givePoints(Point);
-        }
-        else if (Point == 0){
+        } else if (Point == 0) {
             System.out.println("You Didn't earn nor lose any points");
+        }
+
+        System.out.println(currentPlayer.getPlayerName() + " you currently have " + currentPlayer.getPoints() + " points");
+
+        if (Sum == 10 ){
+            System.out.println(currentPlayer.getPlayerName() + " it is your turn again");
+            System.out.println("Press ENTER to roll the dice");
+
+            //userInput.nextLine();
+
+            Sum = Cup.getSum();
+            Point = square.moveToSquare(Sum);
+
+            if (Point < 0) {
+                int newPoint = Math.abs(Point);
+                currentPlayer.takePoints(newPoint);
+            } else if (Point > 0) {
+                currentPlayer.givePoints(Point);
+            } else if (Point == 0) {
+                System.out.println("You Didn't earn nor lose any points");
+            }
+
+            System.out.println(currentPlayer.getPlayerName() + " you currently have " + currentPlayer.getPoints() + " points");
         }
 
     }
