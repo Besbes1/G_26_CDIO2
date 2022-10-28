@@ -34,7 +34,8 @@ public class Game {
             }
             else if (player2.getPoints()>=3000)
             {
-                System.out.println("Congratulations player 2: " +player2.getPlayerName()+ " you have won");
+                //Prints out Congrats text
+                System.out.println(gameInstruction.returnText(9) +player2.getPlayerName()+ gameInstruction.returnText(10));
                 break;
 
             }
@@ -42,13 +43,15 @@ public class Game {
 
             if (player1.getPoints()>=3000)
             {
-                System.out.println("Congratulations player 1: " +player1.getPlayerName()+ " you have won");
+                //Prints out Congrats text
+                System.out.println(gameInstruction.returnText(9) +player1.getPlayerName()+ gameInstruction.returnText(10));
                 break;
 
             }
             else if (player2.getPoints()>=3000)
             {
-                System.out.println("Congratulations player 2: " +player2.getPlayerName()+ " you have won");
+                //Prints out Congrats text
+                System.out.println(gameInstruction.returnText(9) +player2.getPlayerName()+ gameInstruction.returnText(10));
                 break;
 
             }
