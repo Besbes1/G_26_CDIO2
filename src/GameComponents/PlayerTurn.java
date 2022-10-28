@@ -1,6 +1,7 @@
 package GameComponents;
 
 import java.util.Scanner;
+import gui_main.GUI;
 
 public class PlayerTurn {
     Text gameInstruction = new Text("src/gametext.csv");
@@ -22,6 +23,7 @@ public class PlayerTurn {
     }
     public void move(Player currentPlayer) {
 
+        GUI gui = new GUI();
         Scanner userInput = new Scanner(System.in);
         Square square = new Square();
 
@@ -34,6 +36,7 @@ public class PlayerTurn {
         userInput.nextLine();
 
         Sum = Cup.getSum();
+
         Point = square.moveToSquare(Sum);
 
         if (Point < 0) {
