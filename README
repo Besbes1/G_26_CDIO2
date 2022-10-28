@@ -1,0 +1,18 @@
+HOW TO IMPORT AND RUN CODE FROM GITHUB
+1. Choose the folder where you want the game to be.
+2. Open your terminal and navigate to that folder.
+3. Type: git init (this initialises your git repository)
+4. Type: git clone https://github.com/Besbes1/G_26_CDIO2.git
+5. You now have the repository on your computer.
+6. Open the project folder (called G_26_CDIO2) in IntelliJ
+7. Click on G_26_CDIO2/src/Game.java in the Project menu on the right of the screen.
+    7.1 If there is a message saying "Project JDK not defined", click on "Setup JDK" in the opposite corner
+        and choose IntelliJ's suggestion in the drop-down menu.
+8. Click on Run (the green triangle) to play the game.
+
+
+HOW TO TRANSLATE GAME
+1. Open Ressource folder in the Project menu on the right of the screen.
+2. Edit the texts in the csv files without changing the order they are placed in.
+
+HOW TO COMPILE THE CODE
