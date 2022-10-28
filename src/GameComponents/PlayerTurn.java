@@ -41,10 +41,10 @@ public class PlayerTurn {
             currentPlayer.takePoints(newPoint);
         } else if (Point > 0) {
             currentPlayer.givePoints(Point);
-        } else if (Point == 0) {
-            gameInstruction.printText(6); // Prints "You Didn't earn nor lose any points"
+        } /*else if (Point == 0) {
+            gameInstruction.printText(6); // Prints "You Didn't earn nor lose any points", for now square descriptions already contain this info
 
-        }
+        }*/
         // Prints out current player's balance
         System.out.printf("%s %s %.0f \n",currentPlayer.getPlayerName(),gameInstruction.returnText(7),currentPlayer.getPoints());
 
