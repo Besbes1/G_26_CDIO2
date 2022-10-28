@@ -7,7 +7,7 @@ public class Text {
         this.file = file;
     }
     public void printText(int index) {
-        String[] row = new String[24];
+        String[] row = new String[25];
         BufferedReader csvReader;
 
         try {

@@ -28,7 +28,7 @@ public class Square {
     public int moveToSquare(int Sum) {
         Text squareDescription = new Text("src/squaredescriptions");
         Text gameInstruction = new Text("src/gametext.csv");
-        if(Sum>12 && Sum>2) {
+        if(Sum>24 && Sum>2) {
             gameInstruction.printText(11);
         }
         squareDescription.printText(Sum);

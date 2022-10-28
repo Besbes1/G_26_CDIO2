@@ -52,7 +52,7 @@ public class PlayerTurn {
             System.out.println(currentPlayer.getPlayerName() + "...");
             gameInstruction.printText(8); // Prints Press enter instruction
 
-            userInput.nextLine();
+           userInput.nextLine();
 
             Sum = Cup.getSum();
             Point = square.moveToSquare(Sum);
