@@ -11,7 +11,7 @@ public class Player {
     public Player(String playerName, int points) {
         this.playerName = playerName;
         this.points = points;
-        System.out.println("Player " + playerName);
+        //System.out.println(playerName);
         PlayerAccount.setBalance(points);
 
     }

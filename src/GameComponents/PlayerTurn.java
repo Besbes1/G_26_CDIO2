@@ -23,10 +23,10 @@ public class PlayerTurn {
         int Sum = 0;
         int Point = 0;
 
-        System.out.println("\n"+ currentPlayer.getPlayerName() + gameInstruction.returnText(4)); // Prints player turn message
+        System.out.println("\n"+ currentPlayer.getPlayerName() + " " + gameInstruction.returnText(4)); // Prints player turn message
         gameInstruction.printText(5); // Prints Press enter instruction
 
-        //userInput.nextLine();
+        userInput.nextLine();
 
         Sum = Cup.getSum();
         Point = square.moveToSquare(Sum);
@@ -41,13 +41,13 @@ public class PlayerTurn {
 
         }
         // Prints out current player's balance
-        System.out.printf("%s %s %.0f \n",currentPlayer.getPlayerName(),gameInstruction.returnText(8),currentPlayer.getPoints());
+        System.out.printf("%s %s %.0f \n",currentPlayer.getPlayerName(),gameInstruction.returnText(7),currentPlayer.getPoints());
 
         if (Sum == 10 ){
-            System.out.println(currentPlayer.getPlayerName());
-            gameInstruction.printText(5); // Prints Press enter instruction
+            System.out.println(currentPlayer.getPlayerName() + "...");
+            gameInstruction.printText(8); // Prints Press enter instruction
 
-            //userInput.nextLine();
+            userInput.nextLine();
 
             Sum = Cup.getSum();
             Point = square.moveToSquare(Sum);
@@ -61,7 +61,7 @@ public class PlayerTurn {
                 gameInstruction.printText(6); // Prints "You Didn't earn nor lose any points"
             }
 
-            System.out.printf("%s %s %.0f \n",currentPlayer.getPlayerName(),gameInstruction.returnText(8),currentPlayer.getPoints());
+            System.out.printf("%s %s %.0f \n",currentPlayer.getPlayerName(),gameInstruction.returnText(7),currentPlayer.getPoints());
         }
 
     }
