@@ -7,6 +7,7 @@ public class Game {
         Text gameInstruction = new Text("src/gametext.csv");
         PlayerTurn Turn = new PlayerTurn();
         Scanner userInput = new Scanner(System.in);
+        int diceFaces;
 
         //Prints welcome message
         gameInstruction.printText(1);
@@ -20,6 +21,13 @@ public class Game {
 
         Player player1 = new Player(Player1,1000);
         Player player2 = new Player(Player2,1000);
+
+        //Asks player to choose dice
+        gameInstruction.printText(12);
+
+        diceFaces = userInput.nextInt();
+        Turn.chooseDie(diceFaces);
+
 
 
         while(true)

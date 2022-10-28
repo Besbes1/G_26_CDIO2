@@ -7,12 +7,12 @@ public class Text {
         this.file = file;
     }
     public void printText(int index) {
-        String[] row = new String[18];
+        String[] row = new String[24];
         BufferedReader csvReader;
 
         try {
             csvReader = new BufferedReader(new FileReader(file));
-            for (int i = 0; i < 18; i++) {
+            for (int i = 0; i < row.length; i++) {
                 row[i] = csvReader.readLine();
 
             }

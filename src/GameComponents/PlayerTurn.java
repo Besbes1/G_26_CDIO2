@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class PlayerTurn {
     Text gameInstruction = new Text("src/gametext.csv");
+    Cup Cup = new Cup();
     // Square 2:    Deposit: 250
     // Square 3:    Withdraw: 100
     // Square 4:    Deposit: 100
@@ -15,11 +16,15 @@ public class PlayerTurn {
     // Square 10:   Withdraw: 80
     // Square 11:   Withdraw: 50
     // Square 12:   Deposit: 650
+    public void chooseDie(int diceFaces) {
+        Cup.setDie(diceFaces);
+
+    }
     public void move(Player currentPlayer) {
 
         Scanner userInput = new Scanner(System.in);
         Square square = new Square();
-        Cup Cup = new Cup();
+
         int Sum = 0;
         int Point = 0;
 

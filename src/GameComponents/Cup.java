@@ -7,7 +7,11 @@ This class is reused from our previous project CDIO 1 and translated to English.
 public class Cup {
     Die die1 = new Die();
     Die die2 = new Die();
-
+    int sides;
+    public void setDie(int sides) {
+        die1.setSides(sides);
+        die2.setSides(sides);
+    };
 
     public int getSum () { // henter værdien af hver de to terninger og lægger dem sammen
         int d1 = die1.roll();
