@@ -3,6 +3,7 @@ package GameComponents;
 import java.util.Scanner;
 
 public class PlayerTurn {
+    Text gameInstruction = new Text("src/gametext.csv");
     // Square 2:    Deposit: 250
     // Square 3:    Withdraw: 100
     // Square 4:    Deposit: 100
@@ -22,8 +23,8 @@ public class PlayerTurn {
         int Sum = 0;
         int Point = 0;
 
-        System.out.println("\n"+ currentPlayer.getPlayerName() + " it is your turn");
-        System.out.println("Press ENTER to roll the dice");
+        System.out.println("\n"+ currentPlayer.getPlayerName() + gameInstruction.returnText(4)); // Prints player turn message
+        gameInstruction.printText(5); // Prints Press enter instruction
 
         //userInput.nextLine();
 
@@ -36,13 +37,14 @@ public class PlayerTurn {
         } else if (Point > 0) {
             currentPlayer.givePoints(Point);
         } else if (Point == 0) {
-            System.out.println("You Didn't earn nor lose any points");
-        }
+            gameInstruction.printText(6); // Prints "You Didn't earn nor lose any points"
 
-        System.out.println(currentPlayer.getPlayerName() + " you currently have " + currentPlayer.getPoints() + " points");
+        }
+        // Prints out current player's balance
+        System.out.printf("%s %s %.0f \n",currentPlayer.getPlayerName(),gameInstruction.returnText(8),currentPlayer.getPoints());
 
         if (Sum == 10 ){
-            System.out.println(currentPlayer.getPlayerName() + " it is your turn again");
+            System.out.println(currentPlayer.getPlayerName() +);
             System.out.println("Press ENTER to roll the dice");
 
             //userInput.nextLine();

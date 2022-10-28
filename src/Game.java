@@ -12,10 +12,10 @@ public class Game {
         gameInstruction.printText(1);
 
 
-        System.out.print("Player 1: What's your name? ");
+        gameInstruction.printText(2);
         String Player1=userInput.nextLine();
-
-        System.out.print("Player 2: What's your name? ");
+        
+        gameInstruction.printText(3);
         String Player2=userInput.nextLine();
 
         Player player1 = new Player(Player1,1000);
