@@ -45,7 +45,7 @@ public class PlayerTurn {
 
         if (Sum == 10 ){
             System.out.println(currentPlayer.getPlayerName());
-            System.out.println("Press ENTER to roll the dice");
+            gameInstruction.printText(5); // Prints Press enter instruction
 
             //userInput.nextLine();
 
@@ -58,10 +58,10 @@ public class PlayerTurn {
             } else if (Point > 0) {
                 currentPlayer.givePoints(Point);
             } else if (Point == 0) {
-                System.out.println("You Didn't earn nor lose any points");
+                gameInstruction.printText(6); // Prints "You Didn't earn nor lose any points"
             }
 
-            System.out.println(currentPlayer.getPlayerName() + " you currently have " + currentPlayer.getPoints() + " points");
+            System.out.printf("%s %s %.0f \n",currentPlayer.getPlayerName(),gameInstruction.returnText(8),currentPlayer.getPoints());
         }
 
     }
