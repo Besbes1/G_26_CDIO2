@@ -29,13 +29,15 @@ public class PlayerTurn {
 
         int Sum = 0;
         int Point = 0;
+        int[] DiceArray = new int[3];
 
         System.out.println("\n"+ currentPlayer.getPlayerName() + " " + gameInstruction.returnText(4)); // Prints player turn message
         gameInstruction.printText(5); // Prints Press enter instruction
 
         userInput.nextLine();
 
-        Sum = Cup.getSum();
+        DiceArray = Cup.getSum();
+        Sum = DiceArray[2];
 
         Point = square.moveToSquare(Sum);
 
@@ -57,7 +59,8 @@ public class PlayerTurn {
 
            userInput.nextLine();
 
-            Sum = Cup.getSum();
+            DiceArray = Cup.getSum();
+            Sum = DiceArray[2];
             Point = square.moveToSquare(Sum);
 
             if (Point < 0) {
