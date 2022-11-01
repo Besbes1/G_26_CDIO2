@@ -1,7 +1,6 @@
 package GameComponents;
 
 import java.util.Scanner;
-import gui_main.GUI;
 
 public class PlayerTurn {
     Text gameInstruction = new Text("src/gametext.csv");
@@ -21,9 +20,8 @@ public class PlayerTurn {
         Cup.setDie(diceFaces);
 
     }
-    public void move(Player currentPlayer) {
+    public int[] move(Player currentPlayer) {
 
-        GUI gui = new GUI();
         Scanner userInput = new Scanner(System.in);
         Square square = new Square();
 
@@ -34,7 +32,7 @@ public class PlayerTurn {
         System.out.println("\n"+ currentPlayer.getPlayerName() + " " + gameInstruction.returnText(4)); // Prints player turn message
         gameInstruction.printText(5); // Prints Press enter instruction
 
-        userInput.nextLine();
+        //userInput.nextLine();
 
         DiceArray = Cup.getSum();
         Sum = DiceArray[2];
@@ -51,13 +49,13 @@ public class PlayerTurn {
 
         }
         // Prints out current player's balance
-        System.out.printf("%s %s %.0f \n",currentPlayer.getPlayerName(),gameInstruction.returnText(7),currentPlayer.getPoints());
+        System.out.printf("%s %s %d \n",currentPlayer.getPlayerName(),gameInstruction.returnText(7),currentPlayer.getPoints());
 
         if (Sum == 10 ){
             System.out.println(currentPlayer.getPlayerName() + "...");
             gameInstruction.printText(8); // Prints Press enter instruction
 
-           userInput.nextLine();
+           //userInput.nextLine();
 
             DiceArray = Cup.getSum();
             Sum = DiceArray[2];
@@ -72,8 +70,10 @@ public class PlayerTurn {
                 gameInstruction.printText(6); // Prints "You Didn't earn nor lose any points"
             }
 
-            System.out.printf("%s %s %.0f \n",currentPlayer.getPlayerName(),gameInstruction.returnText(7),currentPlayer.getPoints());
+            System.out.printf("%s %s %d \n",currentPlayer.getPlayerName(),gameInstruction.returnText(7),currentPlayer.getPoints());
         }
+
+        return DiceArray;
 
     }
 

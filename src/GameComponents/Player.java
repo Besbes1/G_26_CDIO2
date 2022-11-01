@@ -5,7 +5,7 @@ package GameComponents;
 public class Player {
 
     private String playerName;
-    private double points;
+    private int points;
     Account PlayerAccount = new Account(playerName);
 
     public Player(String playerName, int points) {
@@ -23,15 +23,15 @@ public class Player {
 
      */
 
-    public void takePoints(double newPoints) {
+    public void takePoints(int newPoints) {
         PlayerAccount.withDraw(newPoints);
     }
 
-    public void givePoints(double newPoints){
+    public void givePoints(int newPoints){
         PlayerAccount.deposit(newPoints);
     }
 
-    public double getPoints(){
+    public int getPoints(){
         //System.out.println(PlayerAccount.getBalance());
         return (PlayerAccount.getBalance());
     }
